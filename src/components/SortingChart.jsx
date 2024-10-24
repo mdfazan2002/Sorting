@@ -5,9 +5,9 @@ import algorithmInfos from "../data/algorithmInfos";
 function SortingChart() {
     const { sortingState, generateSortingArray, startVisualizing, changeSortingSpeed, changeAlgorithm } = useContext(SortingContext);
 
-    useEffect(() => {
-        generateSortingArray();
-    }, []);
+useEffect(() => {
+    generateSortingArray();
+}, [generateSortingArray]); // Add 'generateSortingArray' to the dependency array
 
     return (
         <div className="w-100vw h-100vh mt-4 mb-4 flex flex-col items-center ">
